@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>Blue Weave/Linen Effect</title>
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    
+    body.blue {
+    background:url(blue-linen-tile.jpg) repeat;
+    background-position:fixed; 
+    color:#ffffff;
+    text-shadow:#ffcccc;
+    }
+    
+    body.steel {
+    background:url(blue-steel-tile.jpg) repeat !important;
+    background-position:fixed;     
+    }
+    
+    body.linen {
+    background:url(blue-linen.png) repeat !important;
+    background-position:fixed;     
+    }
+    
+    
+    a {
+      color:#f7f7f7;
+    }
+  </style>
+  
+  <script type="text/javascript">
+  
+  function toggleBG (bg)  {
+    if(bg=='blue-linen') {
+    
+      document.body.setAttribute("class", "linen") ;
+      
+    } else if(bg=='blue-steel') {
+      document.body.setAttribute("class", "steel") ;
+    } else { 
+      document.body.setAttribute("class", "blue") ;
+    }
+   }
+</script>
+  
+</head>
+<body  class="blue">
+
+
+<h1>Blue Weave/Linen Effect</h1>
+
+<p>Creating a linen effect backdrop image  - similar to that default mac wallpaper is not that difficult.</p>
+
+<p>Simply follow these steps - make your own colour choices and tweak the values along the way to suit yourself</p>
+<ul>
+  <li>Start with a large blank square, I use 256x256px </li>
+  <li>Call your first layer - vertical and Fill with the colour of your choice - eg. #8a8a8a</li>
+  <li>Apply a motion blur to this layer 90 degrees and distance of about 50-100 (I used 60)</li>
+  <li>Create a new layer (horizontal)and fill with a contrasting color, e.g. #cfcfcf</li>
+  <li>Apply a motion blur again. This time 0 degrees and a slightly different amount.</li>
+  <li>Set Layer blending mode to "screen" on the top most layer</li>
+  <li>You can add a differnt base colour layer on the bottom - and make both the horizontal and vertical layers blending modes "screen" to see hints of this colour</li>
+</ul>
+
+<h2>Now the harder bit - making it tile</h2>
+<ul>
+  <li>Use the Filter >> Offset.<br />
+      Set the horizontal and vertical offsets to half your image width and height respictively</li>
+  <li>The undefined areas should be set to wrap around</li>
+  <li>Now withe the filter applied, use the clone tool to remove the obvious join lines</li>
+  <li>Perform the offset again - hopefully there will be no join lines, repeat thi sprocess until you are happy with the results</li>
+  <li>You final image will most likely have a border area which looks "wrong" Just crop your final image inside this</li>
+  
+</ul>
+
+<a href="#blue-linen" onclick="toggleBG('blue-linen');return false;" title="toggle">Blue Linen</a> | 
+<a href="#blue-steel" onclick="toggleBG('blue-weave');return false;" title="toggle">Blue Weave</a> |
+<a href="#blue-steel" onclick="toggleBG('blue-steel');return false;" title="toggle">Blue Steel</a> |
+
+
+
+
+
+</body>
+</html>
